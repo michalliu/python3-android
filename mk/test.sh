@@ -16,7 +16,9 @@ PORT=5554
 ./platform-tools/adb -s "emulator-${PORT}" push "${ANDROID_PREFIX}/${BUILD_IDENTIFIER}" "${ANDROID_EMULATOR_TESTDIR}"
 # Run the tests!
 ./platform-tools/adb -s "emulator-${PORT}" shell <<-EOF
+	set -x
 	cd "${ANDROID_EMULATOR_TESTDIR}"
+	export LD_LIBRARY_PATH="${ANDROID_EMULATOR_TESTDIR}/lib:$LD_LIBRARY_PATH"
 	bin/python3.4 -m test
 	exit
 EOF
