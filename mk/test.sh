@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 source ./env
 
+#ln -sf ~/Library/Android/sdk sdk/android-sdk-r24.0.2
 pushd "$BASE/sdk/android-sdk-r${SDK_REV}" > /dev/null
 
 # TODO: Figure out an appropriate port number.
