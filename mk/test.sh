@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -x
 source ./env
 
 #ln -sf ~/Library/Android/sdk sdk/android-sdk-r24.0.2
