@@ -17,7 +17,7 @@ PORT=5554
 # Run the tests!
 ./platform-tools/adb -s "emulator-${PORT}" shell <<-EOF
 	cd "${ANDROID_EMULATOR_TESTDIR}"
-	bin/python3.3 -m test
+	bin/python3.4 -m test
 	exit
 EOF
 # Stop the emulator.
