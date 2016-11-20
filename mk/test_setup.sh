@@ -37,7 +37,7 @@ if [[ -z "${SDK_ID}" ]]; then
     exit 1
 fi
 # Install base SDKs.
-echo "${ANDROID_AGREE_LICENSE_TERMS}" | ./tools/android -s update sdk --no-ui -a --filter "${SDK_ID},tool,platform-tool" || exit 1
+#echo "${ANDROID_AGREE_LICENSE_TERMS}" | ./tools/android -s update sdk --no-ui -a --filter "${SDK_ID},tool,platform-tool" || exit 1
 
 # Get SDK system image ID.
 case "${ANDROID_PLATFORM}" in
