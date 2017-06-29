@@ -72,7 +72,7 @@ if [[ -z "${ABI_IMG_ID}" ]]; then
 fi
 
 # Install SDK system image
-echo "${ANDROID_AGREE_LICENSE_TERMS}" | ./tools/android -s update sdk --no-ui -a --filter "${ABI_IMG_ID}" || exit 1
+#echo "${ANDROID_AGREE_LICENSE_TERMS}" | ./tools/android -s update sdk --no-ui -a --filter "${ABI_IMG_ID}" || exit 1
 
 # Make a VM.
 [[ ! -d "${ANDROID_TEST_PREFIX}" ]] && (mkdir "${ANDROID_TEST_PREFIX}" || exit 1)
